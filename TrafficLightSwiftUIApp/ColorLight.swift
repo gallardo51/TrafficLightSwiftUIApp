@@ -7,16 +7,20 @@
 
 import SwiftUI
 
-struct RedLightView: View {
+struct ColorLight: View {
+    
+    let color: Color
+    let opacity: Double
+    
     var body: some View {
         Circle()
             .frame(width: 120, height: 120)
             .shadow(color: .gray, radius: 10)
-            .foregroundStyle(Color(.red))
+            .foregroundStyle(Color(color).opacity(opacity))
             
     }
 }
 
 #Preview {
-    RedLightView()
+    ColorLight(color: .red, opacity: 1)
 }
