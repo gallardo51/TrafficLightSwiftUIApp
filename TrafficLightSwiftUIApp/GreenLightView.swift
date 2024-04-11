@@ -12,6 +12,7 @@ struct GreenLightView: View {
         Circle()
             .frame(width: 120, height: 120)
             .shadow(color: .gray, radius: 10)
+            .foregroundStyle(Color(.green))
     }
 }
 
